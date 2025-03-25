@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#sortspace {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.sortspace_select, #search {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.sortspace_select {
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+#search {
+    width: 200px;
+    background: #f9f9f9;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+#search::placeholder {
+    color: #999;
+}
+
+#clothes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.clothe {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.clothe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.clothe_img {
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.category, .rating, .price {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+#loader {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+#loader {
+    width: 100px;
+    height: 100px;
+    border: 12px solid #f3f3f3;
+    border-top: 12px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    margin: 30px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
